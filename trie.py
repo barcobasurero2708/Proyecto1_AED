@@ -120,7 +120,7 @@ class TrieVideo(Scene)
         self.new_scene()
         self.section_title("OPERACION: BUSQUEDA", 'Buscamos "casa" y luego "ca"')
         diagram = self.draw_trie(self.trie)
-        circles = self._last_node_circles  # key -> (circle, node)
+        circles = self._last_node_circles
         self.play(Create(diagram), run_time=2)
 
         def highlight_word(word, color):
@@ -297,14 +297,11 @@ class TrieVideo(Scene)
             self.play(FadeIn(sub), run_time=0.7)
 
     def wait_until(self, target):
-        # Completa cada bloque hasta su marca temporal, para que la escena dure 4:00.
         remaining = target - self.time
         if remaining > 0:
             self.wait(remaining)
 
     def draw_trie(self, trie):
-        # Dibuja la estructura recorriendo el Trie real y guarda una referencia
-        # circle/nodo por prefijo para poder resaltar caminos (busqueda/eliminacion).
         nodes = []
         edges = []
         positions = {}
