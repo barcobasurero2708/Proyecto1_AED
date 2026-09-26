@@ -1,40 +1,39 @@
-Anima tu Estructura de Datos — Trie
+#Anima tu Estructura de Datos — Trie
+
+
+##Descripción del proyecto
 
 Proyecto desarrollado para la representación y animación de una estructura de datos Trie (árbol de prefijos) mediante Manim, mostrando visualmente sus principales operaciones.
 
-- Descripción del proyecto
-
-Un Trie es una estructura de datos especializada en el almacenamiento y búsqueda de cadenas. Su principal característica es que las palabras que comparten un mismo prefijo reutilizan los mismos nodos del árbol.
-
 En esta animación se muestra:
 
-Qué es un Trie y cómo se organiza.
-Construcción de un Trie a partir de varias palabras.
-Inserción de una palabra.
-Búsqueda de palabras y prefijos.
-Eliminación de una palabra.
-Manejo del caso de un Trie vacío.
-Complejidad temporal de las operaciones.
-Algunos usos del Trie
+- Qué es un Trie y cómo se organiza.
+- Construcción de un Trie a partir de varias palabras.
+- Inserción de una palabra.
+- Búsqueda de palabras y prefijos.
+- Eliminación de una palabra.
+- Manejo del caso de un Trie vacío.
+- Complejidad temporal de las operaciones.
+- Algunos usos del Trie
 
 La implementación del Trie se realizó en Python y la animación se desarrolló utilizando la librería de Manim.
 
-- Integrantes
-Aaron Adriano Romano Castro
-Bruno William Garcia Lopez
-Sebastian Chahuara Galdos
+##Integrantes
+- Aaron Adriano Romano Castro
+- Bruno William Garcia Lopez
+- Sebastian Chahuara Galdos
 
 Sección: Teo. 3 - Lab. 365
 
-- Requerimiento para funcionamiento
+##Requerimiento para funcionamiento
 
-Python 3.13 (64 bits)
-Librería manim
-IDE con soporte para python
-FFmpeg, requerido por Manim para la generación del video.
+- Python 3.13 (64 bits)
+- Librería manim
+- IDE con soporte para python
+- FFmpeg, requerido por Manim para la generación del video.
 
 
-📁 Estructura del proyecto
+#Estructura del proyecto
 PythonProject/
 │
 ├── trie.py
