@@ -35,7 +35,7 @@ Sección: Teo. 3 - Lab. 365
 ## Estructura del proyecto
 
 ```
-PythonProject/
+Proyecto1_AED/
 │
 ├── trie.py
 ├── README.md
