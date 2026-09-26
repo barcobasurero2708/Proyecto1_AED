@@ -2,17 +2,6 @@
 from manim import *
 from collections import defaultdict
 
-# Trie animado para el proyecto CS2023 - "Anima tu Estructura de Datos".
-#
-# Renderizar:
-#   python -m manim -pql trie.py TrieVideo
-#
-# Calidad alta:
-#   python -m manim -pqh trie.py TrieVideo
-#
-# Implementación propia de Trie.
-
-
 INTEGRANTES = [
     "Aaron Adriano Romano Castro",
     "Bruno William Garcia Lopez",
@@ -56,7 +45,6 @@ class Trie:
         return node.is_end
 
     def delete(self, word):
-        # Devuelve False si la palabra no estaba completa en el Trie.
         if not self.search(word):
             return False
 
@@ -95,9 +83,7 @@ class TrieVideo(Scene):
         self.trie = Trie()
         self._last_node_circles = {}
 
-        # ============================================================
-        # TÍTULO + INTEGRANTES
-        # ============================================================
+# Presentación:
 
         self.section_title(
             "TRIE",
@@ -112,9 +98,7 @@ class TrieVideo(Scene):
 
         self.wait_until(15)
 
-        # ============================================================
-        # ¿QUÉ ES UN TRIE?
-        # ============================================================
+# Definición
 
         self.clear()
 
@@ -155,9 +139,7 @@ class TrieVideo(Scene):
 
         self.wait_until(45)
 
-        # ============================================================
-        # CONSTRUCCIÓN DEL TRIE
-        # ============================================================
+# Construcción del trie
 
         self.clear()
 
@@ -191,9 +173,9 @@ class TrieVideo(Scene):
 
         self.wait_until(85)
 
-        # ============================================================
-        # INSERCIÓN
-        # ============================================================
+
+# INSERCIÓN
+
 
         self.clear()
 
@@ -230,9 +212,7 @@ class TrieVideo(Scene):
 
         self.wait_until(120)
 
-        # ============================================================
-        # BÚSQUEDA
-        # ============================================================
+# Busqueda
 
         self.clear()
 
@@ -295,7 +275,7 @@ class TrieVideo(Scene):
                 run_time=0.8
             )
 
-        # Buscar casa
+# Buscar "casa"
 
         found = self.trie.search("casa")
 
@@ -326,7 +306,7 @@ class TrieVideo(Scene):
 
         revert(mobs1)
 
-        # Buscar ca
+# Buscar "ca"
 
         prefix_only = self.trie.search("ca")
 
@@ -353,9 +333,7 @@ class TrieVideo(Scene):
 
         self.wait_until(150)
 
-        # ============================================================
-        # ELIMINACIÓN
-        # ============================================================
+#Eliminación
 
         self.clear()
 
@@ -424,9 +402,7 @@ class TrieVideo(Scene):
 
         self.wait_until(180)
 
-        # ============================================================
-        # CASO BORDE
-        # ============================================================
+#Caso borde
 
         self.clear()
 
@@ -491,9 +467,7 @@ class TrieVideo(Scene):
 
         self.wait_until(205)
 
-        # ============================================================
-        # COMPLEJIDAD
-        # ============================================================
+#Complejidad
 
         self.clear()
 
@@ -539,9 +513,7 @@ class TrieVideo(Scene):
 
         self.wait_until(225)
 
-        # ============================================================
-        # FINAL
-        # ============================================================
+# Aplicaciones y cierre
 
         self.clear()
 
@@ -557,7 +529,6 @@ class TrieVideo(Scene):
             color=self.CYAN
         )
 
-        # Centrado horizontal y ligeramente arriba
         ending.move_to(
             UP * 0.3
         )
@@ -571,7 +542,6 @@ class TrieVideo(Scene):
             line_spacing=1.2
         )
 
-        # Centrar los créditos debajo del mensaje
         credits.next_to(
             ending,
             DOWN,
@@ -598,9 +568,6 @@ class TrieVideo(Scene):
 
         self.wait_until(240)
 
-    # ================================================================
-    # TÍTULOS DE SECCIÓN
-    # ================================================================
 
     def section_title(
         self,
@@ -616,7 +583,6 @@ class TrieVideo(Scene):
             color=self.BLUE
         )
 
-        # Centrado horizontal arriba
         heading.to_edge(
             UP,
             buff=0.45
@@ -655,7 +621,6 @@ class TrieVideo(Scene):
                 line_spacing=1.15
             )
 
-            # to_edge(DOWN) mantiene el objeto centrado horizontalmente
             foot.to_edge(
                 DOWN,
                 buff=0.2
@@ -666,9 +631,6 @@ class TrieVideo(Scene):
                 run_time=0.5
             )
 
-    # ================================================================
-    # CONTROL DEL TIEMPO
-    # ================================================================
 
     def wait_until(self, target):
 
@@ -677,15 +639,8 @@ class TrieVideo(Scene):
         if remaining > 0:
             self.wait(remaining)
 
-    # ================================================================
-    # DIBUJAR TRIE
-    # ================================================================
 
     def draw_trie(self, trie):
-
-        # Dibuja la estructura recorriendo el Trie real.
-        # Guarda una referencia a cada círculo para poder
-        # resaltar caminos durante búsqueda y eliminación.
 
         nodes = []
         edges = []
